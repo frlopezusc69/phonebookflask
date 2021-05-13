@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Sign Up with Us Here!</h1>
+
+<form action="" method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <fieldset>
+            {{ form.username.label }} {{ form.username(class='form-control', placeholder='Username') }}
+        </fieldset>
+        <fieldset>
+            {{ form.email.label }} {{ form.email(class='form-control', placeholder='Email') }}
+        </fieldset>
+        <fieldset>
+            {{ form.phone_number.label }} {{ form.phone_number(class='form-control', placeholder='Phone Number') }}
+        </fieldset>
+        <fieldset>
+            {{ form.confirm_phone_number.label }} {{ form.confirm_phone_number(class='form-control', placeholder='Confirm Phone Number') }}
+        </fieldset>
+        {{ form.submit(class='btn btn-success') }}
+    </div>
+</form>
+
+{% endblock content %}
